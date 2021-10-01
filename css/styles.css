@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vh;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 100px 400px 100px 300px 100px;
+    grid-template-rows: 100px 800px 100px;
+    grid-template-areas:
+    "left-street left-space center-street up-street right-street"
+    "left-street left-space center-street right-space right-street"
+    "left-street down-street center-street right-space right-street";
+
+    height: 1000px;
+    width: 1000px;
+    background-color:rgb(196, 196, 196);
+}
+
+.image-container{
+    display: flex;
+    position: relative;
+}
+
+.image-container:hover .tank-image{
+    display: block;
+}
+
+.tank-image{
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main-container > div{
+    display: flex;
+}
+
+.main-container > img{
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.vertical{
+    flex-direction: column;
+}
+
+.left-street{
+    grid-area: left-street;
+}
+
+.down-street{
+    grid-area: down-street;
+}
+
+.center-street{
+    grid-area: center-street;
+}
+
+.right-street{
+    grid-area: right-street;
+}
+
+.up-street{
+    grid-area: up-street;
+}
+
+.down-street{
+    grid-area: down-street;
+}
+
+.left-space{
+    grid-area: left-space;
+}
